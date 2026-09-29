@@ -14,12 +14,13 @@ public class Main {
         autor.nome = " James Clear";
         autor.email = "1book@atomichabits.com";
         autor.cpf = "123.456.789-00";
-//        ------------------------------------------
+
         Livro livro  = new Livro();
         livro.nome = "Hábitos Atômicos.";
         livro.anoDePublicacao = 2021;
-        livro.descricao = "Livro sobre desenovlvimento pessoal.";
+        livro.descricao = "Livro sobre desenvolvimento pessoal.";
         livro.valor = 65.00;
+        livro.aplicaDescontoDe(0.1);
         livro.autor = autor;
 
         livro.mostrarDetalhes();
@@ -28,21 +29,32 @@ public class Main {
         autor2.nome = " Paulo Silveira";
         autor2.email = "paulo.silveira@caelum.com.br";
         autor2.cpf = "123.456.789.10";
-//    --------------------------------------------------
 
         Livro livro2 = new Livro();
         livro2.nome = "Reponsabilidade Extrema.";
         livro2.anoDePublicacao = 2022;
         livro2.descricao = "Livro sobre tomar responsabilidade sobre suas ações.";
         livro2.valor = 85.00;
+        livro2.aplicaDescontoDe(0.1);
         livro2.autor = autor2;
 
         livro2.mostrarDetalhes();
 //    -------------------------------------------
+        Autor autor3 = new Autor();
+        autor3.nome = " Charles Duhigg";
+        autor3.email = " charlesduhigg@gmail.com ";
+        autor3.cpf = "123.456.789.11";
+
         Livro livro3 = new Livro();
+        livro3.nome = "O poder do hábito.";
+        livro3.anoDePublicacao = 2012;
+        livro3.descricao = "Livro sobre hábitos e como eles influenciam nossas vidas.";
         livro3.valor = 72.90;
         System.out.println("Valor atual: " + livro3.valor);
-        livro3.valor -= livro3.valor * 0.1;
+        livro3.aplicaDescontoDe(0.1);
         System.out.println("Valor com desconto: " + livro3.valor);
+        livro3.autor = autor3;
+
+        livro3.mostrarDetalhes();
     }
 }
