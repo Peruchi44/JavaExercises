@@ -4,9 +4,7 @@ public class RegrasDeDesconto {
         livro4.valor = 120.00;
         System.out.println("Valor atual: " + livro4.valor);
 
-        if (!livro4.aplicaDescontoDe(0.1)) {
-            System.out.println("Desconto não pode ser maior do que 30%.");
-        } else {
+        if (livro4.aplicaDescontoDe(0.4)) {
             System.out.println("Valor com desconto: " + livro4.valor);
         }
     }

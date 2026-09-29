@@ -1,13 +1,13 @@
 public class Livro {
     String nome;
     String descricao;
-    double valor;
+    private double valor;
     int anoDePublicacao;
     Autor autor;
 
-    public Livro() {
-        System.out.println("conatrutor do livro chamado");
-    }
+//    public Livro() {
+//        System.out.println("construtor do livro chamado");
+//    }
 
     void mostrarDetalhes(){
         String mensagem = "Detalhes do Livro: ";
@@ -35,5 +35,11 @@ public class Livro {
         }
         this.valor -= this.valor * porcentagem;
         return true;
+    }
+
+    void adicionaValor(double valor){}
+
+    double retornaValor(){
+        return this.valor;
     }
 }
