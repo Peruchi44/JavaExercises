@@ -19,8 +19,9 @@ public class Main {
         livro.nome = "Hábitos Atômicos.";
         livro.anoDePublicacao = 2021;
         livro.descricao = "Livro sobre desenvolvimento pessoal.";
-        livro.adicionaValor(65.00);
+        livro.setValor(65.00);
         livro.aplicaDescontoDe(0.1);
+        System.out.println("Valor com desconto: " + livro.getValor());
         livro.autor = autor;
 
         livro.mostrarDetalhes();
@@ -34,9 +35,9 @@ public class Main {
         livro2.nome = "Reponsabilidade Extrema.";
         livro2.anoDePublicacao = 2022;
         livro2.descricao = "Livro sobre tomar responsabilidade sobre suas ações.";
-        livro2.adicionaValor(85.00);
+        livro2.setValor(85.00);
         livro2.aplicaDescontoDe(0.1);
-        System.out.println("Valor com desconto: " + livro2.retornaValor());
+        System.out.println("Valor com desconto: " + livro2.getValor());
         livro2.autor = autor2;
 
         livro2.mostrarDetalhes();
@@ -50,10 +51,10 @@ public class Main {
         livro3.nome = "O poder do hábito.";
         livro3.anoDePublicacao = 2012;
         livro3.descricao = "Livro sobre hábitos e como eles influenciam nossas vidas.";
-        livro3.adicionaValor(72.90);
-        System.out.println("Valor atual: " + livro3.retornaValor());
+        livro3.setValor(72.90);
+        System.out.println("Valor atual: " + livro3.getValor());
         livro3.aplicaDescontoDe(0.1);
-        System.out.println("Valor com desconto: " + livro3.retornaValor());
+        System.out.println("Valor com desconto: " + livro3.getValor());
         livro3.autor = autor3;
 
         livro3.mostrarDetalhes();

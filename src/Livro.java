@@ -37,9 +37,11 @@ public class Livro {
         return true;
     }
 
-    void adicionaValor(double valor){}
+    public double getValor() {
+        return valor;
+    }
 
-    double retornaValor(){
-        return this.valor;
+    public void setValor(double valor) {
+        this.valor = valor;
     }
 }
