@@ -6,9 +6,9 @@ public class Livro {
     private Autor autor;
     private boolean impresso;
 
-    // demais métodos omitidos
-
-    public Livro() {}
+    public Livro(Autor autor) {
+        this.autor = autor;
+    }
 
     public double getValor() {
         return valor;
@@ -43,20 +43,17 @@ public class Livro {
     }
 
     public void mostrarDetalhes() {
-        System.out.println("Nome: " + nome);
-        System.out.println("Descrição: " + descricao);
-        System.out.println("Valor: " + valor);
-        System.out.println("Autor: " + autor.getNome());
+        System.out.println("Nome: " + getNome());
+        System.out.println("Descrição: " + getDescricao());
+        System.out.println("Valor: " + getValor());
+        System.out.println("Autor: " + getAutor());
     }
 
     public boolean aplicaDescontoDe(double porcentagem) {
         if (porcentagem > 0.3) {
             return false;
-        } else if (!this.impresso && porcentagem > 0.15) {
-            return false;
         }
-
-        this.valor -= this.valor * porcentagem; // apenas um '-' antes do '='
+        this.valor -= this.valor * porcentagem;
         return true;
     }
 }

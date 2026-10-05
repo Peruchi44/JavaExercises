@@ -7,12 +7,10 @@ public class Main {
         autor.setEmail("rodrigo.turini@caelum.com.br");
         autor.setCpf("123.456.789.10");
 
-        Livro livro = new Livro();
+        Livro livro = new Livro(autor);
         livro.setNome("Java 8 Prático");
         livro.setDescricao("Novos recursos da linguagem");
         livro.setValor(59.90);
-
-        livro.setAutor(autor);
 
         livro.mostrarDetalhes();
 
@@ -21,12 +19,10 @@ public class Main {
         outroAutor.setEmail("paulo.silveira@caelum.com.br");
         outroAutor.setCpf("123.456.789.10");
 
-        Livro outroLivro = new Livro();
+        Livro outroLivro = new Livro(outroAutor);
         outroLivro.setNome("Lógica de Programação");
         outroLivro.setDescricao("Crie seus primeiros programas");
         outroLivro.setValor(59.90);
-
-        outroLivro.setAutor(outroAutor);
 
         outroLivro.mostrarDetalhes();
     }
