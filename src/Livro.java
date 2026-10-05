@@ -1,41 +1,14 @@
 public class Livro {
-    String nome;
-    String descricao;
+
+    private String nome;
+    private String descricao;
     private double valor;
-    int anoDePublicacao;
-    Autor autor;
+    private Autor autor;
+    private boolean impresso;
 
-//    public Livro() {
-//        System.out.println("construtor do livro chamado");
-//    }
+    // demais métodos omitidos
 
-    void mostrarDetalhes(){
-        String mensagem = "Detalhes do Livro: ";
-        String separadorMensagem = "-----";
-        System.out.println(mensagem);
-        System.out.println(separadorMensagem);
-        System.out.println("Nome: " + nome );
-        System.out.println("Descrição: " + descricao);
-        System.out.println("Ano de lançamento: "  + anoDePublicacao );
-        System.out.println(separadorMensagem);
-
-        if (this.temAutor()){
-            autor.mostrarDetalhesAutor();
-        }
-    }
-
-    boolean temAutor(){
-        return this.autor != null;
-    }
-
-    public boolean aplicaDescontoDe(double porcentagem){
-        if (porcentagem > 0.3){
-            System.out.println("Desconto não pode ser maior que 30%");
-            return false;
-        }
-        this.valor -= this.valor * porcentagem;
-        return true;
-    }
+    public Livro() {}
 
     public double getValor() {
         return valor;
@@ -43,5 +16,47 @@ public class Livro {
 
     public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+
+    public void mostrarDetalhes() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Descrição: " + descricao);
+        System.out.println("Valor: " + valor);
+        System.out.println("Autor: " + autor.getNome());
+    }
+
+    public boolean aplicaDescontoDe(double porcentagem) {
+        if (porcentagem > 0.3) {
+            return false;
+        } else if (!this.impresso && porcentagem > 0.15) {
+            return false;
+        }
+
+        this.valor -= this.valor * porcentagem; // apenas um '-' antes do '='
+        return true;
     }
 }
