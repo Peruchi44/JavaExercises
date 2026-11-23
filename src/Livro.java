@@ -8,6 +8,9 @@ public class Livro {
 
     public Livro(Autor autor) {
         this.autor = autor;
+        this.nome = "Sem nome";
+        this.descricao = "Sem descrição";
+        this.valor = 0.0;
     }
 
     public double getValor() {
