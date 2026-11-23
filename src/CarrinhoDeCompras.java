@@ -4,7 +4,7 @@ public class CarrinhoDeCompras {
 
     public void adiciona(Livro livro) {
         System.out.println("Adicionando: " + livro);
-        livro.aplicaDescontoDe(0.05);
+        livro.aplicaDescontoDe(0.2);
         total += livro.getValor();
     }
 
