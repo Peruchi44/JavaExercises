@@ -14,6 +14,10 @@ public class Livro {
         this.impresso = false;
     }
 
+    public double getTaxaDeImpressao() {
+            return this.getValor() * 0.05;
+        }
+
     public double getValor() {
         return valor;
     }
