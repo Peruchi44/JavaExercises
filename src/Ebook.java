@@ -1,5 +1,11 @@
 public class Ebook extends Livro {
+
+//    private String nome;
+//    private String descricao;
+//    private double valor;
+//    private Autor autor;
     private String waterMark;
+
 
     public Ebook(Autor autor) {
         super (autor);

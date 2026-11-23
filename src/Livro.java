@@ -11,6 +11,7 @@ public class Livro {
         this.nome = "Sem nome";
         this.descricao = "Sem descrição";
         this.valor = 0.0;
+        this.impresso = false;
     }
 
     public double getValor() {
@@ -56,7 +57,8 @@ public class Livro {
         if (porcentagem > 0.3) {
             return false;
         }
-        this.valor -= this.valor * porcentagem;
+        double desconto = this.getValor() * porcentagem;
+        this.setValor(this.getValor() - desconto);
         return true;
     }
 }
