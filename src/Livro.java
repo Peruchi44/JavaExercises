@@ -8,15 +8,11 @@ public abstract class Livro {
 
     public Livro(Autor autor) {
         this.autor = autor;
-        this.nome = "Sem nome";
-        this.descricao = "Sem descrição";
-        this.valor = 0.0;
-        this.impresso = false;
     }
 
-    public double getTaxaDeImpressao() {
-            return this.getValor() * 0.05;
-        }
+    public boolean aplicandoDescontoDe(double porcentagem) {
+        return false;
+    }
 
     public double getValor() {
         return valor;
