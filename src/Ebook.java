@@ -6,6 +6,11 @@ public class Ebook extends Livro {
 //    private Autor autor;
     private String waterMark;
 
+    @Override
+    public boolean aplicandoDescontoDe(double porcentagem) {
+            return false;
+    }
+
     public Ebook(Autor autor) {
         super (autor);
     }

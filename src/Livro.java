@@ -10,9 +10,7 @@ public abstract class Livro {
         this.autor = autor;
     }
 
-    public boolean aplicandoDescontoDe(double porcentagem) {
-        return false;
-    }
+    public abstract boolean aplicandoDescontoDe(double porcentagem);
 
     public double getValor() {
         return valor;
