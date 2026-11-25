@@ -6,7 +6,6 @@ public class Ebook extends Livro {
 //    private Autor autor;
     private String waterMark;
 
-
     public Ebook(Autor autor) {
         super (autor);
     }
