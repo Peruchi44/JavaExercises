@@ -1,4 +1,4 @@
-public class Revista {
+public class Revista implements Produto {
 
     private String nome;
     private String descricao;
@@ -8,7 +8,6 @@ public class Revista {
     public String getNome() {
         return nome;
     }
-
 
 
     public void setNome(String nome) {

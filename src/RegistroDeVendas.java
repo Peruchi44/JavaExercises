@@ -1,29 +1,23 @@
 public class RegistroDeVendas {
+
     public static void main(String[] args) {
 
-    Autor autor = new Autor();
-    autor.setNome("Mauricio Aniche");
-    autor.setEmail("mauricio.aniche@gmail.com");
-    autor.setCpf("123.456.789-00");
+        Autor autor = new Autor();
+        autor.setNome("Mauricio Aniche");
 
-    Livro livro = new LivroFisico(autor);
-    livro.setNome("Test-Driven Development");
-    livro.setDescricao("Um livro sobre desenvolvimento orientado a testes");
-    livro.setValor(75.00);
+        LivroFisico fisico = new LivroFisico(autor);
+        fisico.setNome("Test-Driven Development");
+        fisico.setValor(59.90);
 
-    livro.mostrarDetalhes();
+        Ebook ebook = new Ebook(autor);
+        ebook.setNome("Test-Driven Development");
+        ebook.setValor(29.90);
 
-    Autor autor2 = new Autor();
-    autor2.setNome("Fernando Peruchi");
-    autor2.setEmail("fernandoperuchi23@gmail.com");
+        CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
 
-    Livro livro2 = new LivroFisico(autor2);
-    livro2.setNome("Getting better");
-    livro2.setDescricao("Livro feito para quem se sente perdido");
-    livro2.setValor(120);
+        carrinho.adiciona(fisico);
+        carrinho.adiciona(ebook);
 
-    livro2.mostrarDetalhes();
-
+        System.out.println("Total " + carrinho.getTotal());
+    }
 }
-}
-
